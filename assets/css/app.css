@@ -105,6 +105,16 @@ body {
   background-color: var(--white);
 }
 
+.bg-image {
+  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-proof-wrapper {
   padding: 30px;
 }
@@ -128,6 +138,10 @@ body {
 
 .mobile-line-break {
   display: inline;
+}
+
+.desktop-line-break {
+  display: none;
 }
 
 .review-stars {
@@ -186,4 +200,84 @@ body {
   font-family: "League Spartan Regular";
   font-style: italic;
   line-height: 1.4;
+}
+
+@media screen and (min-width: 1157px) {
+
+  .bg-image {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .social-proof-wrapper {
+    padding: 80px !important;
+    width: 840px;
+  }
+
+  .desktop-header-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .review-info {
+    text-align: left !important;
+  }
+
+  .review-info h1 {
+    font-size: 40px !important;
+  }
+
+  .mobile-line-break {
+    display: none !important;
+  }
+
+  .desktop-line-break {
+    display: inline !important;
+  }
+
+  .review-stars {
+    margin-top: 20px;
+  }
+
+  .star-section {
+    width: 400px !important;
+    background-color: var(--light-grayish-magenta);
+    display: flex;
+    height: 20px !important;
+    padding-left: 30px;
+  }
+
+  .star-section:nth-child(1) {
+    margin-left: -80px !important;
+  }
+
+  .star-section:nth-child(2) {
+    margin-left: -40px !important;
+  }
+
+  .star-section p {
+    margin-top: 2px;
+    padding-left: 35px;
+  }
+
+  .reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 220px;
+    height: 160px;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  .card:nth-child(3) {
+    margin-top: 40px;
+  }
+
 }
